@@ -2,11 +2,11 @@ package main
 
 import (
 	"github.com/hashicorp/terraform/plugin"
-	"github.com/oleksandr-minakov/testpg"
+	"github.com/oleksandr-minakov/boltdb"
 )
 
 func main() {
 	plugin.Serve(&plugin.ServeOpts{
-		ProviderFunc: testpg.Provider,
+		ProviderFunc: boltdb.Provider,
 	})
 }
